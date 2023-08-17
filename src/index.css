@@ -1,19 +1,26 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-body{
+body {
   margin: 0;
   background-color: black;
-  padding: 0 5rem 5rem 5rem;
+  /* padding: 0 5rem 5rem 5rem; */
 }
-.card-container{
+.card-container {
   display: flex;
   justify-content: center;
   width: 80%;
   flex-wrap: wrap;
 }
-.carousel{
+.carousel {
   /* width: 80%; */
   height: 30%;
   margin-top: 2rem;
 }
+.full-container {
+  height: 100vh;
+  width: 72.9vw;
+}
+/* ----------- Galaxy S3 ----------- */
+
+/* Portrait and Landscape */

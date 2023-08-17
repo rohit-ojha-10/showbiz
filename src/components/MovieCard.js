@@ -12,7 +12,7 @@ import { useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 
 export function MovieCard({ movie }) {
-  const [color, setColor] = useState("white")
+  const [color, setColor] = useState("white");
   const navigate = useNavigate();
   return (
     <Card className="flex-col justify-evenly w-full max-w-[18rem] shadow-lg h-50 m-2 bg-sky-500/50 hover:bg-gray-600">
@@ -27,7 +27,9 @@ export function MovieCard({ movie }) {
           color="red"
           variant="text"
           className="!absolute top-4 right-4 rounded-full"
-          onClick={() => color == "white" ? setColor("red") : setColor("white")}
+          onClick={() =>
+            color == "white" ? setColor("red") : setColor("white")
+          }
         >
           {/* <i class="fa fa-heart-o" aria-hidden="true"></i> */}
           <svg
@@ -42,7 +44,11 @@ export function MovieCard({ movie }) {
       </CardHeader>
       <CardBody>
         <div className="mb-3 flex items-center justify-between ">
-          <Typography variant="h5" color="white" className="font-medium subpixel-antialiased text-white">
+          <Typography
+            variant="h5"
+            color="white"
+            className="font-medium subpixel-antialiased text-white"
+          >
             {movie.titleText.text}
           </Typography>
           <Typography
@@ -69,14 +75,17 @@ export function MovieCard({ movie }) {
         </Typography>
       </CardBody>
       <CardFooter className="pt-3">
-
-        <Button size="lg" fullWidth={true} onClick={() => navigate('/details', {
-          state:
-            { img: movie.primaryImage.url }
-        })}>
+        <Button
+          size="lg"
+          fullWidth={true}
+          onClick={() =>
+            navigate("/details", {
+              state: { img: movie.primaryImage.url },
+            })
+          }
+        >
           View more
         </Button>
-
       </CardFooter>
     </Card>
   );

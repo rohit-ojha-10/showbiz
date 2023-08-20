@@ -10,9 +10,10 @@ import { BellIcon, Cog6ToothIcon } from "@heroicons/react/24/solid";
 export function PageNavBar() {
   return (
     <Navbar
+      style={{position:"absolute", zIndex:"100"}}
       variant="gradient"
       color="transparent"
-      className="mx-auto max-w-screen-3xl from-blue-gray-900 to-blue-gray-800 px-4 py-3"
+      className="mx-auto max-w-screen-3xl from-blue-gray-900 to-blue-gray-800 px-4 py-3 backdrop-blur-md"
     >
       <div className="flex flex-wrap items-center justify-between gap-y-4 text-white">
         <Typography

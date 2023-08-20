@@ -5,7 +5,6 @@ import {
   CardFooter,
   Typography,
   Button,
-  Tooltip,
   IconButton,
 } from "@material-tailwind/react";
 import { useState } from "react";
@@ -15,7 +14,7 @@ export function MovieCard({ movie }) {
   const [color, setColor] = useState("white");
   const navigate = useNavigate();
   return (
-    <Card className="flex-col justify-evenly w-full max-w-[18rem] shadow-lg h-50 m-2 bg-sky-500/50 hover:bg-gray-600">
+    <Card className="movie-card  flex-col justify-evenly w-full max-w-[18rem] shadow-lg h-50 m-2 bg-sky-500/50">
       <CardHeader className="h-64 w-64" floated={false} color="blue-gray">
         <img
           src={movie.primaryImage?.url ? movie.primaryImage.url : ""}
@@ -46,13 +45,11 @@ export function MovieCard({ movie }) {
         <div className="mb-3 flex items-center justify-between ">
           <Typography
             variant="h5"
-            color="white"
-            className="font-medium subpixel-antialiased text-white"
+            className="font-medium subpixel-antialiased"
           >
             {movie.titleText.text}
           </Typography>
           <Typography
-            color="white"
             className="flex items-center gap-1.5 font-normal"
           >
             <svg
@@ -70,13 +67,14 @@ export function MovieCard({ movie }) {
             5.0
           </Typography>
         </div>
-        <Typography className="mb-4" color="white">
+        <Typography className="mb-4" >
           {`Releasing on ${movie.releaseDate.day}/${movie.releaseDate.month}/${movie.releaseDate.year} in theatres near you!`}
         </Typography>
       </CardBody>
       <CardFooter className="pt-3">
         <Button
           size="lg"
+          style={{backgroundColor:"#313866"}}
           fullWidth={true}
           onClick={() =>
             navigate("/details", {

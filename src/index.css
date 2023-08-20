@@ -3,7 +3,9 @@
 @tailwind utilities;
 body {
   margin: 0;
-  background-color: black;
+  box-sizing: border-box;
+  background-color: #181823;
+
   /* padding: 0 5rem 5rem 5rem; */
 }
 .card-container {
@@ -15,7 +17,7 @@ body {
 .carousel {
   /* width: 80%; */
   height: 30%;
-  margin-top: 2rem;
+  /* margin-top: 2rem; */
 }
 .full-container {
   height: 100vh;
@@ -24,3 +26,85 @@ body {
 /* ----------- Galaxy S3 ----------- */
 
 /* Portrait and Landscape */
+
+
+.review-container
+{
+  /* background-color: #001C30; */
+  background-image: linear-gradient(#333333,#181823);
+  padding: 5rem 2rem;
+  
+}
+.review-card-container
+{
+  height: 15rem;
+  width: 19rem;
+  background-color: white;
+  border-radius: 3.5%;
+  display: flex;
+  justify-content: space-evenly;
+  flex-direction: column;
+  border: 1.5px solid #D8D9DA;
+}
+.movie-card
+{
+  color:white;
+}
+.movie-card:hover
+{
+  /* background-color: #393E46; */
+  background-image: linear-gradient(#393E46,#181823);
+  backdrop-filter: blur(12px);
+  color:white;
+  transition: 1.4s;
+}
+
+
+
+.slider {
+  /* background: white; */
+  box-shadow: 0 10px 20px -5px rgba(0, 0, 0, .125);
+  margin: auto;
+  overflow: hidden;
+  position: relative;
+  /* width: 860px; */
+}
+
+.slider::before,
+.slider::after {
+  background: linear-gradient(to right, rgba(255, 255, 255, 1) 0%, rgba(255, 255, 255, 0) 100%);
+  content: "";
+  position: absolute;
+  width: 200px;
+  z-index: 2;
+}
+
+.slider::after {
+  right: 0;
+  top: 0;
+  transform: rotateZ(180deg);
+}
+
+.slider::before {
+  left: 0;
+  top: 0;
+}
+
+@keyframes scroll {
+  0% {
+      transform: translateX(0);
+  }
+  100% {
+      transform: translateX(calc(-400px * 4));
+  }
+}
+
+.slider .slide-track {
+  animation: scroll 40s linear infinite;
+  display: flex;
+  width: calc(400px * 8);
+}
+
+.slide {
+  width: 960px;
+}

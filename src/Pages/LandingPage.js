@@ -5,6 +5,7 @@ import { PageNavBar } from "../components/PageNavBar";
 import { HomePageCarausel } from "../components/HomePageCarausel";
 import { Spinner } from "@material-tailwind/react";
 import { useNavigate } from "react-router-dom";
+import ReviewSection from "../components/ReviewSection";
 
 function LandingPage() {
   const [data, setData] = useState();
@@ -51,12 +52,14 @@ function LandingPage() {
   return (
     <div className="App">
       <PageNavBar />
-      <div className="m-auto">
+      {/* <div className="m-auto">
         <p class="subpixel-antialiased text-white text-3xl m-auto mt-4">
           Browse your favourite films!
         </p>
-      </div>
+      </div> */}
       <HomePageCarausel />
+      <ReviewSection/>
+
       <div>
         <p class="subpixel-antialiased text-white text-3xl m-auto mt-4">
           Upcoming films!
@@ -68,6 +71,7 @@ function LandingPage() {
             movie.primaryImage?.url ? <MovieCard movie={movie} /> : ""
           )}
       </div>
+      <ReviewSection/>
     </div>
   );
 }

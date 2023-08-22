@@ -13,9 +13,9 @@ export function LoginForm() {
   let username = useRef();
   const password = useRef();
   const navigate = useNavigate();
+  const token = localStorage.getItem("authToken");
   useEffect(() => {
     async function verification() {
-      const token = localStorage.getItem("authToken");
       const verify = await axios.get("http://localhost:4000/authenticate", {
         headers: {
           Authorization: `Bearer ${token ? token : ""}`,
@@ -26,7 +26,7 @@ export function LoginForm() {
       }
       console.log(verify);
     }
-    verification();
+    if (token) verification();
   }, []);
   const submitData = async () => {
     const resp = await axios.post("http://localhost:4000/login", {

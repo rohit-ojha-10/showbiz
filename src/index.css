@@ -1,6 +1,7 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+@import url("https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,700;1,100;1,300&display=swap");
 body {
   margin: 0;
   box-sizing: border-box;
@@ -27,16 +28,12 @@ body {
 
 /* Portrait and Landscape */
 
-
-.review-container
-{
+.review-container {
   /* background-color: #001C30; */
-  background-image: linear-gradient(#333333,#181823);
+  background-image: linear-gradient(#333333, #181823);
   padding: 5rem 2rem;
-  
 }
-.review-card-container
-{
+.review-card-container {
   height: 15rem;
   width: 19rem;
   background-color: white;
@@ -44,26 +41,22 @@ body {
   display: flex;
   justify-content: space-evenly;
   flex-direction: column;
-  border: 1.5px solid #D8D9DA;
+  border: 1.5px solid #d8d9da;
 }
-.movie-card
-{
-  color:white;
+.movie-card {
+  color: white;
 }
-.movie-card:hover
-{
+.movie-card:hover {
   /* background-color: #393E46; */
-  background-image: linear-gradient(#393E46,#181823);
+  background-image: linear-gradient(#393e46, #181823);
   backdrop-filter: blur(12px);
-  color:white;
+  color: white;
   transition: 1.4s;
 }
 
-
-
 .slider {
   /* background: white; */
-  box-shadow: 0 10px 20px -5px rgba(0, 0, 0, .125);
+  box-shadow: 0 10px 20px -5px rgba(0, 0, 0, 0.125);
   margin: auto;
   overflow: hidden;
   position: relative;
@@ -72,7 +65,11 @@ body {
 
 .slider::before,
 .slider::after {
-  background: linear-gradient(to right, rgba(255, 255, 255, 1) 0%, rgba(255, 255, 255, 0) 100%);
+  background: linear-gradient(
+    to right,
+    rgba(255, 255, 255, 1) 0%,
+    rgba(255, 255, 255, 0) 100%
+  );
   content: "";
   position: absolute;
   width: 200px;
@@ -92,10 +89,10 @@ body {
 
 @keyframes scroll {
   0% {
-      transform: translateX(0);
+    transform: translateX(0);
   }
   100% {
-      transform: translateX(calc(-400px * 4));
+    transform: translateX(calc(-400px * 4));
   }
 }
 
@@ -107,4 +104,14 @@ body {
 
 .slide {
   width: 960px;
+}
+.lato-font {
+  font-family: "Lato", sans-serif;
+}
+.reviews-container {
+  display: flex;
+  width: 100vw;
+  /* flex-direction: column; */
+  justify-content: space-between;
+  /* flex-wrap: wrap; */
 }

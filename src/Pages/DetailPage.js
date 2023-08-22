@@ -1,6 +1,8 @@
 import React from "react";
 import { PageNavBar } from "../components/PageNavBar";
 import { useLocation } from "react-router-dom";
+import ChatSvg from "../components/ChatSvg";
+import Reviews from "../components/Reviews";
 
 export default function DetailPage() {
   const { state } = useLocation();
@@ -13,9 +15,10 @@ export default function DetailPage() {
         src={img}
         alt="nature image"
       />
-      <p class="subpixel-antialiased text-white text-3xl m-auto mt-4">
-        Releasing in theaters near you!
+      <p class="text-white text-3xl m-auto mt-4 mb-4 lato-font font-semibold text-center">
+        Some of our best reviewers , reviewed the film!
       </p>
+      <Reviews />
     </div>
   );
 }

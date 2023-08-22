@@ -6,14 +6,15 @@ import {
   Input,
 } from "@material-tailwind/react";
 import { BellIcon, Cog6ToothIcon } from "@heroicons/react/24/solid";
+import ProfileMenu from "./ProfileMenu";
 
 export function PageNavBar() {
   return (
     <Navbar
-      style={{position:"absolute", zIndex:"100"}}
+      style={{ position: "absolute", zIndex: "100" }}
       variant="gradient"
       color="transparent"
-      className="mx-auto max-w-screen-3xl from-blue-gray-900 to-blue-gray-800 px-4 py-3 backdrop-blur-md"
+      className="mx-auto h-48 max-w-screen-3xl from-blue-gray-900 to-blue-gray-800 px-4 py-3"
     >
       <div className="flex flex-wrap items-center justify-between gap-y-4 text-white">
         <Typography
@@ -46,10 +47,11 @@ export function PageNavBar() {
           <Button
             size="sm"
             color="white"
-            className="!absolute right-1 top-1 rounded"
+            className="!absolute right-14 top-1 rounded"
           >
             Search
           </Button>
+          <ProfileMenu />
         </div>
       </div>
     </Navbar>

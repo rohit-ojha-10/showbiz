@@ -58,10 +58,10 @@ function LandingPage() {
         </p>
       </div> */}
       <HomePageCarausel />
-      <ReviewSection/>
+      <ReviewSection />
 
       <div>
-        <p class="subpixel-antialiased text-white text-3xl m-auto mt-4">
+        <p class="subpixel-antialiased text-white text-3xl m-auto mt-4 lato-font font-bold text-center">
           Upcoming films!
         </p>
       </div>
@@ -71,7 +71,6 @@ function LandingPage() {
             movie.primaryImage?.url ? <MovieCard movie={movie} /> : ""
           )}
       </div>
-      <ReviewSection/>
     </div>
   );
 }

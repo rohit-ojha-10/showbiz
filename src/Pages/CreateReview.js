@@ -12,7 +12,7 @@ export default function CreateReview() {
     console.log(title, value);
     const token = localStorage.getItem("authToken");
     const resp = await axios.post(
-      "http://localhost:4000/add-review",
+      "https://showbiz-backend.onrender.com/add-review",
       { title: title, rating: rated, content: value },
       {
         headers: {

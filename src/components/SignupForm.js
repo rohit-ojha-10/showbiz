@@ -15,7 +15,7 @@ export function SignupForm() {
   const submitData = async () => {
     console.log(inputData);
     const resp = await axios.post(
-      "http://localhost:4000/create-user",
+      "https://showbiz-backend.onrender.com/create-user",
       inputData
     );
     console.log(resp);

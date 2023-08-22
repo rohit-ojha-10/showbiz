@@ -16,11 +16,14 @@ function LandingPage() {
       try {
         setLoading(true);
         const token = localStorage.getItem("authToken");
-        const verify = await axios.get("http://localhost:4000/authenticate", {
-          headers: {
-            Authorization: `Bearer ${token ? token : ""}`,
-          },
-        });
+        const verify = await axios.get(
+          "https://showbiz-backend.onrender.com/authenticate",
+          {
+            headers: {
+              Authorization: `Bearer ${token ? token : ""}`,
+            },
+          }
+        );
         if (!verify.data.success) {
           navigate("/login");
         }

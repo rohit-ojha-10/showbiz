@@ -16,11 +16,14 @@ export function LoginForm() {
   const token = localStorage.getItem("authToken");
   useEffect(() => {
     async function verification() {
-      const verify = await axios.get("http://localhost:4000/authenticate", {
-        headers: {
-          Authorization: `Bearer ${token ? token : ""}`,
-        },
-      });
+      const verify = await axios.get(
+        "https://showbiz-backend.onrender.com/authenticate",
+        {
+          headers: {
+            Authorization: `Bearer ${token ? token : ""}`,
+          },
+        }
+      );
       if (verify.data.success) {
         navigate("/");
       }
@@ -29,10 +32,13 @@ export function LoginForm() {
     if (token) verification();
   }, []);
   const submitData = async () => {
-    const resp = await axios.post("http://localhost:4000/login", {
-      username: username.current,
-      password: password.current,
-    });
+    const resp = await axios.post(
+      "https://showbiz-backend.onrender.com/login",
+      {
+        username: username.current,
+        password: password.current,
+      }
+    );
     if (resp.data.success) {
       localStorage.setItem("authToken", resp.data.authToken);
       navigate("/");

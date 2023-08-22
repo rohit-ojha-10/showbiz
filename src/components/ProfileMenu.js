@@ -21,10 +21,11 @@ import {
   Bars2Icon,
 } from "@heroicons/react/24/outline";
 import React from "react";
+import { useNavigate } from "react-router-dom";
 
 export default function ProfileMenu() {
   const [isMenuOpen, setIsMenuOpen] = React.useState(false);
-
+  const navigate = useNavigate();
   const closeMenu = () => setIsMenuOpen(false);
 
   const profileMenuItems = [
@@ -41,7 +42,11 @@ export default function ProfileMenu() {
     {
       label: "Sign Out",
       icon: PowerIcon,
-      onClick: () => console.log("my profile clicked"),
+      onClick: () => {
+        console.log("my profile clicked");
+        localStorage.removeItem("authToken");
+        navigate("/login");
+      },
     },
   ];
 

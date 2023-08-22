@@ -1,18 +1,19 @@
 {
   "files": {
-    "main.css": "/showbiz/static/css/main.0550f997.css",
-    "main.js": "/showbiz/static/js/main.0a702cc4.js",
+    "main.css": "/showbiz/static/css/main.dca91997.css",
+    "main.js": "/showbiz/static/js/main.1d084b23.js",
     "static/media/login4.jpg": "/showbiz/static/media/login4.6391c85bbd561798288d.jpg",
     "static/media/oppenheimer.jpg": "/showbiz/static/media/oppenheimer.15edd3cd34a2346202a8.jpg",
     "static/media/mi.png": "/showbiz/static/media/mi.06c2539e593ac6ebf4a4.png",
     "static/media/barbie.jpg": "/showbiz/static/media/barbie.22e9ce00b0e2199b251d.jpg",
+    "static/media/reviewer_image2.jpg": "/showbiz/static/media/reviewer_image2.1895c3151f8c80dfa116.jpg",
     "static/media/logo.png": "/showbiz/static/media/logo.06c12120a647aeab64be.png",
     "index.html": "/showbiz/index.html",
-    "main.0550f997.css.map": "/showbiz/static/css/main.0550f997.css.map",
-    "main.0a702cc4.js.map": "/showbiz/static/js/main.0a702cc4.js.map"
+    "main.dca91997.css.map": "/showbiz/static/css/main.dca91997.css.map",
+    "main.1d084b23.js.map": "/showbiz/static/js/main.1d084b23.js.map"
   },
   "entrypoints": [
-    "static/css/main.0550f997.css",
-    "static/js/main.0a702cc4.js"
+    "static/css/main.dca91997.css",
+    "static/js/main.1d084b23.js"
   ]
 }

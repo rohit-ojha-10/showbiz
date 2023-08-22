@@ -1,6 +1,6 @@
 import React from "react";
 import { Avatar } from "@material-tailwind/react";
-import pinklakdi from "../images/barbie.jpg";
+import {useNavigate} from "react-router-dom"
 import pp1 from "../images/reviewer_image1.jpg";
 import pp2 from "../images/reviewer_image2.jpg";
 import pp3 from "../images/reviewer_image3.jpg";
@@ -8,13 +8,19 @@ import pp4 from "../images/reviewer_image4.jpg";
 import { Rating } from "@material-tailwind/react";
 
 function ReviewCard({ reviews, num }) {
+  const navigate=useNavigate();
+
+  const showReview=()=>{
+    navigate("/review-page",{state:{reviews}});
+  }
+
   const { name, review, reviewer_name } = reviews;
   let img = pp4;
   if (name === "Oppenheimer") img = pp1;
   if (name === "Barbie") img = pp2;
   if (name === "Blue Beetle") img = pp3;
   return (
-    <div className=" text-base px-4 review-card-container">
+    <div onClick={showReview} className=" text-base px-4 review-card-container">
       <div
         style={{ width: "70%", display: "flex", alignItems: "center" }}
         class="mt-3  avatar-stars"

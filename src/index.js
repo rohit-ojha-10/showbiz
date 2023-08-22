@@ -11,6 +11,7 @@ import axios from "axios";
 import { useState, useEffect } from "react";
 import { SignupForm } from "./components/SignupForm";
 import SignupPage from "./Pages/SignupPage";
+import ReviewPage from "./Pages/ReviewPage";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 const token = localStorage.getItem("authToken");
@@ -32,6 +33,8 @@ root.render(
         <Route path="/login" element={<LoginPage />} />
         <Route path="/signup" element={<SignupPage />} />
         <Route path="/create-review" element={<CreateReview />} />
+        <Route path="/review-page" element={<ReviewPage />} />
+
       </Routes>
     </HashRouter>
   </React.StrictMode>

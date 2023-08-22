@@ -24,7 +24,7 @@ export default function CreateReview() {
   };
   //   console.log("hey", value, title);
   return (
-    <div>
+    <div className="px-20">
       <div className="m-auto">
         <div className="mb-4 flex flex-col gap-6">
           <p class="subpixel-antialiased text-white text-3xl m-auto mt-4 lato-font font-bold">
@@ -53,8 +53,9 @@ export default function CreateReview() {
         </Typography>
       </div>
 
-      <div style={{ height: "70vh", backgroundColor: "white" }}>
+      <div style={{ height: "70vh", backgroundColor: "white"}}>
         <ReactQuill
+          
           theme="snow"
           value={value}
           onChange={setValue}

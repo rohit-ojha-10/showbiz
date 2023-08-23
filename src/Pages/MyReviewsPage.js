@@ -1,7 +1,7 @@
 import axios from "axios";
 import React from "react";
 import { useEffect } from "react";
-import { LOCAL_API_URL } from "../constants";
+import { HOSTED_API_URL, LOCAL_API_URL } from "../constants";
 import { Spinner } from "@material-tailwind/react";
 import ReviewCard from "../components/ReviewCard";
 import { useState } from "react";
@@ -15,7 +15,7 @@ export default function MyReviewsPage() {
       const user_id = localStorage.getItem("user_id");
       try {
         setLoading(true);
-        const resp = await axios.get(`${LOCAL_API_URL}/my-reviews`, {
+        const resp = await axios.get(`${HOSTED_API_URL}/my-reviews`, {
           params: {
             id: user_id,
           },

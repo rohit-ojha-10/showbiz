@@ -6,7 +6,7 @@ import { HomePageCarausel } from "../components/HomePageCarausel";
 import { Spinner } from "@material-tailwind/react";
 import { useNavigate } from "react-router-dom";
 import ReviewSection from "../components/ReviewSection";
-import { LOCAL_API_URL } from "../constants";
+import { HOSTED_API_URL, LOCAL_API_URL } from "../constants";
 
 function LandingPage() {
   const [data, setData] = useState();
@@ -17,7 +17,7 @@ function LandingPage() {
       try {
         setLoading(true);
         const token = localStorage.getItem("authToken");
-        const verify = await axios.get(`${LOCAL_API_URL}/authenticate`, {
+        const verify = await axios.get(`${HOSTED_API_URL}/authenticate`, {
           headers: {
             Authorization: `Bearer ${token ? token : ""}`,
           },

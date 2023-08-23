@@ -2,6 +2,8 @@
 @tailwind components;
 @tailwind utilities;
 @import url("https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,700;1,100;1,300&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Dancing+Script&family=Lato:ital,wght@0,100;0,300;0,700;1,100;1,300&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Dancing+Script&family=Lato:ital,wght@0,100;0,300;0,700;1,100;1,300&family=Source+Code+Pro:wght@500&display=swap");
 body {
   margin: 0;
   box-sizing: border-box;
@@ -102,13 +104,17 @@ body {
   width: calc(400px * 8);
 }
 
-
-
 .slide {
   width: 960px;
 }
 .lato-font {
   font-family: "Lato", sans-serif;
+}
+.cursive-font {
+  font-family: "Dancing Script", cursive;
+}
+.code-font {
+  font-family: "Source Code Pro", monospace;
 }
 .reviews-container {
   display: flex;

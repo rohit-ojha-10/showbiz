@@ -7,8 +7,10 @@ import {
 } from "@material-tailwind/react";
 import { BellIcon, Cog6ToothIcon } from "@heroicons/react/24/solid";
 import ProfileMenu from "./ProfileMenu";
+import { useNavigate } from "react-router-dom";
 
 export function PageNavBar() {
+  const navigate = useNavigate();
   return (
     <Navbar
       style={{ position: "absolute", zIndex: "100" }}
@@ -35,7 +37,7 @@ export function PageNavBar() {
           </IconButton>
         </div>
         <div className="relative flex w-full gap-2 md:w-max">
-          <Input
+          {/* <Input
             type="search"
             color="white"
             label="Type here..."
@@ -43,13 +45,14 @@ export function PageNavBar() {
             containerProps={{
               className: "min-w-[288px]",
             }}
-          />
+          /> */}
           <Button
             size="sm"
             color="white"
-            className="!absolute right-14 top-1 rounded"
+            className="top-1 rounded w-48"
+            onClick={() => navigate("/create-review")}
           >
-            Search
+            Write a Review
           </Button>
           <ProfileMenu />
         </div>

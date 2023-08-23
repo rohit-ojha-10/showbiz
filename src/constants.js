@@ -22,3 +22,5 @@ export const mi_review = {
   review:
     "Like a motorcycle leaping off a mountain, this movie has very high highs and very low lows... But as soon as the action started, especially the last action set pieces, I could've rolled right into the sequel immediately.",
 };
+export const HOSTED_API_URL = "https://showbiz-backend.onrender.com";
+export const LOCAL_API_URL = "http://localhost:4000";

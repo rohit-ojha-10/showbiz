@@ -8,6 +8,7 @@ import {
 import axios from "axios";
 import { useRef, useEffect } from "react";
 import { Link, useNavigate } from "react-router-dom";
+import { LOCAL_API_URL } from "../constants";
 
 export function LoginForm() {
   let username = useRef();
@@ -16,14 +17,11 @@ export function LoginForm() {
   const token = localStorage.getItem("authToken");
   useEffect(() => {
     async function verification() {
-      const verify = await axios.get(
-        "https://showbiz-backend.onrender.com/authenticate",
-        {
-          headers: {
-            Authorization: `Bearer ${token ? token : ""}`,
-          },
-        }
-      );
+      const verify = await axios.get(`${LOCAL_API_URL}/authenticate`, {
+        headers: {
+          Authorization: `Bearer ${token ? token : ""}`,
+        },
+      });
       if (verify.data.success) {
         navigate("/");
       }
@@ -32,15 +30,13 @@ export function LoginForm() {
     if (token) verification();
   }, []);
   const submitData = async () => {
-    const resp = await axios.post(
-      "https://showbiz-backend.onrender.com/login",
-      {
-        username: username.current,
-        password: password.current,
-      }
-    );
+    const resp = await axios.post(`${LOCAL_API_URL}/login`, {
+      username: username.current,
+      password: password.current,
+    });
     if (resp.data.success) {
       localStorage.setItem("authToken", resp.data.authToken);
+      localStorage.setItem("user_id", resp.data.user_id);
       navigate("/");
     }
     console.log(resp);

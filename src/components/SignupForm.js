@@ -8,16 +8,14 @@ import {
 import axios from "axios";
 import { useRef, useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
+import { LOCAL_API_URL } from "../constants";
 
 export function SignupForm() {
   const [inputData, setInputData] = useState();
   const navigate = useNavigate();
   const submitData = async () => {
     console.log(inputData);
-    const resp = await axios.post(
-      "https://showbiz-backend.onrender.com/create-user",
-      inputData
-    );
+    const resp = await axios.post(`${LOCAL_API_URL}/create-user`, inputData);
     console.log(resp);
     if (resp.data.success) {
       navigate("/login");

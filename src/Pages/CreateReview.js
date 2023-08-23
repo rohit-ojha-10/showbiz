@@ -3,6 +3,7 @@ import axios from "axios";
 import React, { useState } from "react";
 import ReactQuill from "react-quill";
 import "react-quill/dist/quill.snow.css";
+import { LOCAL_API_URL } from "../constants";
 
 export default function CreateReview() {
   const [rated, setRated] = React.useState(1);
@@ -12,7 +13,7 @@ export default function CreateReview() {
     console.log(title, value);
     const token = localStorage.getItem("authToken");
     const resp = await axios.post(
-      "https://showbiz-backend.onrender.com/add-review",
+      `${LOCAL_API_URL}/add-review`,
       { title: title, rating: rated, content: value },
       {
         headers: {
@@ -53,9 +54,8 @@ export default function CreateReview() {
         </Typography>
       </div>
 
-      <div style={{ height: "70vh", backgroundColor: "white"}}>
+      <div style={{ height: "70vh", backgroundColor: "white" }}>
         <ReactQuill
-          
           theme="snow"
           value={value}
           onChange={setValue}

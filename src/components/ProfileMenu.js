@@ -8,17 +8,9 @@ import {
   Typography,
 } from "@material-tailwind/react";
 import {
-  CubeTransparentIcon,
   UserCircleIcon,
-  CodeBracketSquareIcon,
-  Square3Stack3DIcon,
-  ChevronDownIcon,
-  Cog6ToothIcon,
-  InboxArrowDownIcon,
   LifebuoyIcon,
   PowerIcon,
-  RocketLaunchIcon,
-  Bars2Icon,
 } from "@heroicons/react/24/outline";
 import React from "react";
 import { useNavigate } from "react-router-dom";
@@ -26,13 +18,16 @@ import { useNavigate } from "react-router-dom";
 export default function ProfileMenu() {
   const [isMenuOpen, setIsMenuOpen] = React.useState(false);
   const navigate = useNavigate();
-  const closeMenu = () => setIsMenuOpen(false);
+  // const closeMenu = () => setIsMenuOpen(false);
 
   const profileMenuItems = [
     {
       label: "My Profile",
       icon: UserCircleIcon,
-      onClick: () => console.log("my profile clicked"),
+      onClick: () => {
+        console.log("my profile clicked");
+        navigate("/my-reviews");
+      },
     },
     {
       label: "Help",

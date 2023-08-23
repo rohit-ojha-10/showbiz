@@ -12,6 +12,7 @@ import { useState, useEffect } from "react";
 import { SignupForm } from "./components/SignupForm";
 import SignupPage from "./Pages/SignupPage";
 import ReviewPage from "./Pages/ReviewPage";
+import MyReviewsPage from "./Pages/MyReviewsPage";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 const token = localStorage.getItem("authToken");
@@ -34,7 +35,7 @@ root.render(
         <Route path="/signup" element={<SignupPage />} />
         <Route path="/create-review" element={<CreateReview />} />
         <Route path="/review-page" element={<ReviewPage />} />
-
+        <Route path="/my-reviews" element={<MyReviewsPage />} />
       </Routes>
     </HashRouter>
   </React.StrictMode>

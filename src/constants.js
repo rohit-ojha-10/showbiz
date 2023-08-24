@@ -1,5 +1,5 @@
 export const Oppenheimer_Review = {
-  reviewer_name: "Saniya Chauhan",
+  reviewer_name: "Divya Ojha",
   name: "Oppenheimer",
   review:
     "This is a complex look at a complicated man, but Oppenheimer unequivocally establishes that this is a story worth telling -- and that Nolan was the perfect filmmaker to do it.",

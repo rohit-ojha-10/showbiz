@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/showbiz/static/css/main.c1d4743e.css",
-    "main.js": "/showbiz/static/js/main.29edb58a.js",
+    "main.js": "/showbiz/static/js/main.e980e4e4.js",
     "static/media/website_video_final.mp4": "/showbiz/static/media/website_video_final.5fa1c8af220fd422df56.mp4",
     "static/media/login4.jpg": "/showbiz/static/media/login4.6391c85bbd561798288d.jpg",
     "static/media/reviewer_image2.jpg": "/showbiz/static/media/reviewer_image2.1895c3151f8c80dfa116.jpg",
@@ -9,10 +9,10 @@
     "static/media/reviewer_image4.jpg": "/showbiz/static/media/reviewer_image4.83e0b403fb654a3f1ad1.jpg",
     "index.html": "/showbiz/index.html",
     "main.c1d4743e.css.map": "/showbiz/static/css/main.c1d4743e.css.map",
-    "main.29edb58a.js.map": "/showbiz/static/js/main.29edb58a.js.map"
+    "main.e980e4e4.js.map": "/showbiz/static/js/main.e980e4e4.js.map"
   },
   "entrypoints": [
     "static/css/main.c1d4743e.css",
-    "static/js/main.29edb58a.js"
+    "static/js/main.e980e4e4.js"
   ]
 }
